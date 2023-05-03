@@ -1,8 +1,6 @@
 package com.lttrung.demopiechart
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.anychart.AnyChart
 import com.anychart.chart.common.dataentry.DataEntry
@@ -30,12 +28,6 @@ class MainActivity : AppCompatActivity() {
         pie.setOnClickListener(object :
             ListenersInterface.OnClickListener(arrayOf("x", "value")) {
             override fun onClick(event: Event) {
-//                Toast.makeText(
-//                    this@MainActivity,
-//                    event.data["x"] + ":" + event.data["value"],
-//                    Toast.LENGTH_SHORT
-//                ).show()
-                startActivity(Intent(this@MainActivity, ColumnChartActivity::class.java))
             }
         })
         val data: MutableList<DataEntry> = ArrayList()
